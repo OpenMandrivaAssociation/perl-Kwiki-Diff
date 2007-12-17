@@ -16,7 +16,6 @@ BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl(Kwiki)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module requires that you be using Kwiki::Revisions. Please make sure
