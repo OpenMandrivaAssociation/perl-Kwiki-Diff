@@ -2,14 +2,14 @@
 %define upstream_version 0.03
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Display differences between the current wiki page and older revisions
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/Kwiki-Diff
+Source0:	https://cpan.metacpan.org/authors/id/I/IA/IAN/Kwiki-Diff-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
