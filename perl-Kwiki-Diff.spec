@@ -1,15 +1,13 @@
 %define upstream_name	 Kwiki-Diff
-%define upstream_version 0.03
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.03
+Release:	6
 
 Summary:	Display differences between the current wiki page and older revisions
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Kwiki-Diff
-Source0:	https://cpan.metacpan.org/authors/id/I/IA/IAN/Kwiki-Diff-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/I/IA/IAN/Kwiki-Diff-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ wiki pages. When clicked, the user is shown a colorful side-by-side comparison
 of that revision and the current revision.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 rm -f t/0-signature.t # debug files make it fails
 
 %build
@@ -47,9 +45,7 @@ make test
 %changelog
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.30.0-1mdv2010.0
 + Revision: 403377
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.03-6mdv2009.0
+- rebuild using %0.03 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.03-6mdv2009.0
 + Revision: 241585
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
